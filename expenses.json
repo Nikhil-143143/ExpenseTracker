@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Monthly salary",
+    "amount": 25000,
+    "type": "income",
+    "category": "Salary",
+    "date": "08/06/2026"
+  },
+  {
+    "id": 2,
+    "title": "Groceries",
+    "amount": 1200,
+    "type": "expense",
+    "category": "Food",
+    "date": "08/06/2026"
+  }
+]

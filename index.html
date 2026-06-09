@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Personal budget board</p>
+        <h1>Expense Tracker</h1>
+        <p class="subtitle">Track spending, watch totals update instantly, and save your data as JSON.</p>
+      </div>
+      <div class="balance-card">
+        <span>Total Balance</span>
+        <strong id="balance">Rs. 0</strong>
+      </div>
+    </section>
+
+    <section class="summary-grid">
+      <article class="summary-card income">
+        <span>Income</span>
+        <strong id="income">Rs. 0</strong>
+      </article>
+      <article class="summary-card expense">
+        <span>Expenses</span>
+        <strong id="expense">Rs. 0</strong>
+      </article>
+      <article class="summary-card count">
+        <span>Transactions</span>
+        <strong id="transaction-count">0</strong>
+      </article>
+    </section>
+
+    <section class="content">
+      <form id="transaction-form" class="panel">
+        <h2>Add transaction</h2>
+
+        <label>
+          Title
+          <input id="title" type="text" placeholder="Example: Groceries" required>
+        </label>
+
+        <label>
+          Amount
+          <input id="amount" type="number" placeholder="Example: 500" min="1" required>
+        </label>
+
+        <label>
+          Type
+          <select id="type">
+            <option value="expense">Expense</option>
+            <option value="income">Income</option>
+          </select>
+        </label>
+
+        <label>
+          Category
+          <select id="category">
+            <option>Food</option>
+            <option>Transport</option>
+            <option>Shopping</option>
+            <option>Bills</option>
+            <option>Salary</option>
+            <option>Other</option>
+          </select>
+        </label>
+
+        <button type="submit">Add transaction</button>
+      </form>
+
+      <section class="panel transactions-panel">
+        <div class="panel-header">
+          <h2>Transactions</h2>
+          <div class="actions">
+            <button id="download-json" type="button" class="secondary">Download JSON</button>
+            <label class="upload-button">
+              Import JSON
+              <input id="upload-json" type="file" accept="application/json">
+            </label>
+          </div>
+        </div>
+
+        <ul id="transaction-list" class="transaction-list"></ul>
+        <p id="empty-state" class="empty-state">No transactions yet. Add your first one from the form.</p>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

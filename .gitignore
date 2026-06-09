@@ -1,0 +1,11 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.log
+
+# Local server helper
+python -m http.server 8000.txt
